@@ -1,37 +1,100 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/FANMixco/Xamarin-OneMoreFabMenu/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Get it
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+|  Package  |Latest Release|
+|:----------|:------------:|
+|**Xamarin-OneMoreFabMenu**|[![NuGet Badge Xamarin-OneMoreFabMenu](https://buildstats.info/nuget/Xamarin-OneMoreFabMenu)](https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/)|
 
-### Markdown
+## Preview
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Example gif](https://raw.githubusercontent.com/DeKoServidoni/OMFM/master/images/example_v1.0.3.gif) 
 
-```markdown
-Syntax highlighted code block
+## How to use
 
-# Header 1
-## Header 2
-### Header 3
+### **Basic example:**
 
-- Bulleted
-- List
+**XML:**
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```xml
+<com.dekoservidoni.omfm.OneMoreFabMenu
+	android:id="@+id/fabMenu"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="bottom|end"
+	app:content_options="@menu/omfm_content_options"
+	app:color_main_button="@color/colorPrimaryDark"
+	app:close_on_click="true"
+	app:color_secondary_buttons="@color/colorPrimary"
+	app:expanded_background_color="@color/colorGrayTrans"/>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**Menu:**
 
-### Jekyll Themes
+**omfm_content_options.xml**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/FANMixco/Xamarin-OneMoreFabMenu/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-### Support or Contact
+	<!-- First button is the initial Fab of the menu -->
+	<!-- Don't need the title in this case, so let it empty -->
+	<item
+		android:id="@+id/main_option"
+		android:icon="@drawable/icon1"
+		android:title=""/>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+	<!-- Options buttons of the Fab menu -->
+
+	<item
+		android:id="@+id/option1"
+		android:icon="@drawable/icon2"
+		android:title="@string/options_1" />
+
+	<item
+		android:id="@+id/option2"
+		android:icon="@drawable/icon3"
+		android:title="@string/options_2" />
+
+	<item
+		android:id="@+id/option3"
+		android:icon="@drawable/icon4"
+		android:title="@string/options_3" />
+</menu>
+```
+
+**C#:**
+
+```csharp
+private OneMoreFabMenu FabButtonMenu { get; set; }
+
+public partial class MainActivity : AppCompatActivity, OneMoreFabMenu.IOptionsClick
+{
+	protected override async void OnCreate(Bundle savedInstanceState)
+	{
+		base.OnCreate(savedInstanceState);
+		FabButtonMenu = FindViewById<OneMoreFabMenu>(Resource.Id.fabMenu);
+		FabButtonMenu.SetOptionsClick(this);
+	}
+}
+
+public void OnOptionClick(Integer p0)
+{
+	switch (Convert.ToInt32(p0))
+	{
+		case Resource.Id.option1:
+			break;
+		case Resource.Id.option2:
+			break;
+		case Resource.Id.option3:
+			break;
+	}
+}
+```
+
+## Licence
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
