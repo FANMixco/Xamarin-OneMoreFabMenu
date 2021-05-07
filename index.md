@@ -1,3 +1,6 @@
+<a href="https://github.com/sponsors/FANMixco/" target="_blank">
+   <img src="https://i.stack.imgur.com/zoyl1.png" alt="sponsor" />
+</a>
 
 ## Get it
 
