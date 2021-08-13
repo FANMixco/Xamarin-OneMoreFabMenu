@@ -1,3 +1,7 @@
+<a href="https://github.com/sponsors/FANMixco/" target="_blank">
+   <img src="https://raw.githubusercontent.com/FANMixco/Xamarin-SearchBar/master/bmc-rezr5vpd.gif" alt="sponsor" />
+</a>
+
 # Xamarin-OneMoreFabMenu
 
 Another floating action button menu with expand/collapse behavior. This Xamarin solution is based on André Servidoni's version: https://github.com/DeKoServidoni/OMFM
