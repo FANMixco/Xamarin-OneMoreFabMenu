@@ -92,9 +92,9 @@ public void OnOptionClick(Integer p0)
 
 ## Download
 
-|  Package  |Latest Release|
-|:----------|:------------:|
-|**Xamarin-OneMoreFabMenu**|[![NuGet Badge Xamarin-OneMoreFabMenu](https://buildstats.info/nuget/Xamarin-OneMoreFabMenu)](https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/)|
+|Latest Release|Downloads|
+|:------------:|:------------:|
+|[![NuGet Badge Xamarin-OneMoreFabMenu](https://img.shields.io/nuget/v/Xamarin-OneMoreFabMenu)](https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/)|[![NuGet Badge OneMoreFabMenu](https://img.shields.io/nuget/dt/Xamarin-OneMoreFabMenu)](https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/)|
 
 ## Licence
 
